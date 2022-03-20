@@ -13,14 +13,16 @@ times.addEventListener('click',function(){
 
 
 // fixed navbar
-let navbar = document.querySelector('.navbar .wrap');
-window.onload= () =>{
+let navbar = document.querySelector('.navbar');
+console.log(navbar)
+window.addEventListener('scroll',()=>{
     let navH = navbar.getBoundingClientRect().height;
     let scrHi = window.pageYOffset;
-    console(scrHi)
-    if(navH < scrHi){
+    console.log(navH)
+    // coole.log(scrHi)
+    if(scrHi > navH){
         navbar.classList.add('fixed-nav')
     }else{
         navbar.classList.remove('fixed-nav')
     }
-}
+})
