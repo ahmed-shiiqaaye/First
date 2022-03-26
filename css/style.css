@@ -412,6 +412,9 @@ body{
     width: 100%;
     border-radius: 24px;
 }
+.contact .container form .btn a{
+    color: white;
+}
 .contact .container form .btn:hover{
     background: #0681b6;
 }
