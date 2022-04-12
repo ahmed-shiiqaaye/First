@@ -14,11 +14,11 @@ times.addEventListener('click',function(){
 
 // fixed navbar
 let navbar = document.querySelector('.navbar');
-console.log(navbar)
+// console.log(navbar)
 window.addEventListener('scroll',()=>{
     let navH = navbar.getBoundingClientRect().height;
     let scrHi = window.pageYOffset;
-    console.log(navH)
+    // console.log(navH)
     // coole.log(scrHi)
     if(scrHi > navH){
         navbar.classList.add('fixed-nav')
@@ -29,4 +29,6 @@ window.addEventListener('scroll',()=>{
 
 let copyRightDate = document.getElementsByClassName('date')[0];
 let now = new Date().getFullYear();
-copyRightDate.textContent = now 
+copyRightDate.textContent = now
+
+
