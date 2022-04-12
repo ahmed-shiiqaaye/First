@@ -26,3 +26,7 @@ window.addEventListener('scroll',()=>{
         navbar.classList.remove('fixed-nav')
     }
 })
+
+let copyRightDate = document.getElementsByClassName('date')[0];
+let now = new Date().getFullYear();
+copyRightDate.textContent = now 
