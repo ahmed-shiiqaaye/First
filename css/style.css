@@ -23,7 +23,7 @@
     --lightColor: rgba(255, 255, 255, 0.2403);
     --navLinkHover:greenyellow;
     --iconcolors: #af8300;
-
+    --ff : -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 img{
     width: 100%;
@@ -33,13 +33,13 @@ img{
     width: 100%;
     margin: 0 auto;
     padding: 20px 30px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--ff)
 }
 .container .h1-title{
     text-transform: uppercase;
     text-align: center;
-    color: var(--btns);
-    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(212, 95, 27);
+    font-family:var(--ff);
     font-weight: 700;
     margin-bottom: 20px;
 }
@@ -55,7 +55,7 @@ body{
     padding: 0 10px;
     width: 100%;
     margin: 0 auto;
-    background-color: var(--f-color);
+    background-color: white;
     transition: var(--trisition);
 }
 .navbar .wrap{
@@ -66,10 +66,17 @@ body{
 }
 .navbar .logo{
     text-transform: capitalize;
-    font-weight: 600;
-    letter-spacing: 0.9px;
     color:black;
     padding-left: 10px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .logo .img{
+    width: 100%;
+    height: 100%;
 }
 .navbar .links ul{
     display: flex;
@@ -78,14 +85,15 @@ body{
     padding: 10px;
 }
 .navbar .links ul li a{
-    color: var(--white);
+    color: black;
     font-size: 17px;
     font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .navbar .links ul li a:hover,
 .navbar .logo:hover{
     cursor: pointer;
-    color: var(--dark);
+    color: var(--f-color);
 }
 #menu,
 #times
@@ -99,8 +107,8 @@ body{
 .home{
     height: 90vh;
     width: 100%;
-    background: linear-gradient(to right,#2e3e4ea8 50%,rgba(0, 0, 0, 0.8) 50%),
-    url(/img/arnold-francisca-f77Bh3inUpE-unsplash-min.jpg) center center/cover;
+    background: linear-gradient(to right,#2e3e4ea8 50%,rgba(0, 0, 0, 0.6) 50%),
+    url(/img/Home.jpg) center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +124,7 @@ body{
 .home .text h1{
     font-size: 55px;
     font-weight: 800;
-    font-family: var(--primary-font);
+    font-family: var(--ff);
     text-transform: capitalize;
 }
 .home .text h3{
@@ -124,7 +132,7 @@ body{
     font-family: 'Charm', cursive;
     letter-spacing: 1px;
     text-transform: capitalize;
-    color: var(--btns);
+    color: greenyellow;
 }
 .home .text .btn{
     padding: 8px 20px;
@@ -173,7 +181,7 @@ body{
 /* about */
 .about{
     width: 100%;
-    background:var(--dark);
+    /* background:var(--dark); */
     padding: 50px 0;
 }
 .about .container .title .h1-title{
@@ -192,13 +200,14 @@ body{
     width: 100%;
     height: 300px;
     overflow: hidden;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     box-shadow:0 0 10px var(--btns);
 }
 .about .container .flex .text p{
     line-height: 1.7;
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.815);
+    color: rgba(0, 0, 0, .6);
+    /* color: rgba(255, 255, 255, 0.815); */
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .about .container .flex .text{
@@ -208,16 +217,18 @@ body{
 }
 /* projects */
 .projects{
-    padding: 40px 0;
+    padding: 40px 0 80px;
     background-color: #080808;
     color: #fff;
     text-align: center;
     background:rgba(0, 0, 0, 0.6);
-    background: linear-gradient(to right,hsla(0, 0%, 0%, 0.91),rgba(0, 0, 0, 0.9)),
-    url(/img/lap.jpg) center center/cover;
+    background: linear-gradient(to right,hsla(0, 0%, 0%, 0.91),rgba(0, 0, 0, 0.4)),
+    url(/img/Cape\ Town.jpg) center center/cover;
+    font-family: var(--ff);
 }
 .projects .container .title .box .line{
     width: 50px;
+    background: #000;
 }
 .projects .container .title{
     margin-bottom: 20px;
@@ -230,12 +241,11 @@ body{
     padding: 20px 0;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     padding: 0;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     font-weight: normal;
-    font-family: josefin sans;
 }
 .projects .container .card{
     display: grid;
@@ -290,10 +300,15 @@ body{
     transform: scale(1.1);
     transition: var(--trisition);
 }
+.projects .container .title .box .line{
+    background: var(--btns);
+}
 /* skills --------- */
 .skills {
     padding: 40px 0;
-    background: rgba(0, 0, 0, 0.6);
+}
+.skills .container .title{
+    margin-bottom: 40px;
 }
 .skills .container .title .h1-title{
     margin-bottom: 5px;
@@ -301,17 +316,21 @@ body{
 .skills .container .grid{
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
    padding-top: 30px;
+  
 }
 .skills .container .grid .item .icon{
-    color: greenyellow;
+    color: black;
     font-size: 28px;
     margin-right: 8px;
 }
+.skills .container .grid .item .icon i{
+    font-size: 29px;
+}
 .skills .container .grid .item .name{
     text-transform: capitalize;
-    color: #fff;
+    color: rgba(0, 0, 0, .6);
 }
 /* reviews ----------*/
 .reviews{
@@ -353,9 +372,12 @@ body{
     text-transform: uppercase;
     color: rgb(21, 255, 0);
 }
+
+
+
 /* contact */
 .contact{
-    background: var(--dark);
+    background: rgba(0, 0, 0, .02);
     color:var(--white);
     padding: 40px 0;
 }
@@ -372,7 +394,7 @@ body{
  .container .title .line{
     height: 2px;
     width: 35px;
-    background:rgba(255, 255, 255, 0.7);
+    background:var(--btns);
 }
  .container .title .box{
    display: flex;
@@ -384,45 +406,66 @@ body{
     color: var(--btns);
 }
 .contact .container form{
-    width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 60px;
+    padding: 30px;
 }
-.contact .container form .both{
-    margin-bottom: 15px;
+.contact .container form div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
 }
-.contact .container form .both input,textarea{
-    padding: 10px;
-    width: 100%;
-    margin-top: 5px;
-    background: rgba(255, 255, 255, .7);
-    border: none;
+.contact .container form div input,textarea,.ps{
+    padding: 14px;
+    border: 1px solid rgba(0, 0, 0, .4);
     outline: none;
-    /* border-radius: 4px; */
-    font-size: 16px;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--ff);
+}
+.contact .ps{
+    margin-bottom: 10px;
+}
+.contact .container form textarea,.ps{
+    width: 100%;
 }
 .contact .container form .btn{
-    padding: 8px 20px;
-    display: inline-block;
-    color:#fff;
-    background-color: var(--f-color);
-    margin-top: 15px;
-    text-transform: capitalize;
-    cursor: pointer;
-    margin: 15px 5px;
-    transition: var(--trisition);
-    border: 1px solid transparent;
-    display: block;
     width: 100%;
-    /* border-radius: 24px; */
-}
-.contact .container form .btn a{
-    color: white;
+    padding: 12px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .4);
+    transition: var(--trisition);
+    cursor: pointer;
 }
 .contact .container form .btn:hover{
-    background: #0681b6;
+    background: rgba(0, 0, 0, .1);
 }
+
+.footer{
+    background: #000;
+    color: white;
+}
+.footer .container .hr{
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+}
+.footer .container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.footer .container div span{
+    font-size: 22px;
+}
+.footer .container div span i{
+    color: var(--f-color);
+}
+
+
 .home .text .btn:hover{
     background-color: var(--dark);
     color: var(--white);
@@ -445,9 +488,9 @@ footer a{
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--btns);
     z-index: 20;
     width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 
 
@@ -457,11 +500,12 @@ footer a{
 @media(max-width:800px){
     #menu,#times{
         display: block;
+        color: black;
     }
     .navbar .links{
         position: fixed;
         background-color: var(--f-color);
-        width: 70%;
+        width: 60%;
         height: 100vh;
         display: flex;
         justify-content: center;
