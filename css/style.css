@@ -93,7 +93,7 @@ body{
 .navbar .links ul li a:hover,
 .navbar .logo:hover{
     cursor: pointer;
-    color: var(--f-color);
+    color: var(--btns);
 }
 #menu,
 #times
@@ -505,7 +505,7 @@ footer a{
     .navbar .links{
         position: fixed;
         background-color: var(--f-color);
-        width: 60%;
+        width: 50%;
         height: 100vh;
         display: flex;
         justify-content: center;
@@ -529,6 +529,9 @@ footer a{
     }
     .navbar .links ul li{
         border-bottom: 1px solid var(--lightColor);
+    }
+    .navbar .links ul li a:hove{
+        color: var(--btns);
     }
     .navbar #times{
         position: absolute;
