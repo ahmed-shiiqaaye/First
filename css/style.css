@@ -407,21 +407,23 @@ body{
 }
 .contact .container form{
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
     margin-top: 60px;
-    padding: 30px;
 }
 .contact .container form div{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 10px;
+    /* width: 100%; */
 }
 .contact .container form div input,textarea,.ps{
     padding: 14px;
     border: 1px solid rgba(0, 0, 0, .4);
     outline: none;
     font-family: var(--ff);
+    width: 100%;
 }
 .contact .ps{
     margin-bottom: 10px;
@@ -548,9 +550,7 @@ footer a{
     }
 }
 @media(max-width:602px){
-    .contact .container form{
-        width: 100%
-    }
+
     .reviews .container h3{
         line-height: 1.6;
         font-size: 15px;
