@@ -32,3 +32,13 @@ let now = new Date().getFullYear();
 copyRightDate.textContent = now
 
 
+let navLink = document.querySelectorAll('.nav_link');
+let sideBar = document.querySelector('.links');
+
+navLink.forEach(link =>{
+    link.addEventListener('click',()=>{
+        if(sideBar.classList.contains('active')){
+            sideBar.classList.remove('active')
+        }
+    })
+})
