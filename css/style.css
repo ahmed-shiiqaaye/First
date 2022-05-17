@@ -534,6 +534,8 @@ footer a{
     .navbar .links ul li{
         border-bottom: 1px solid var(--lightColor);
         width: 100%;
+        padding: 10px;
+        margin: 16px 0;
     }
     .navbar .links ul li:hover{
         background: #2696C5;
