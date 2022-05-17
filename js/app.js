@@ -5,10 +5,13 @@ let links = document.querySelector('.links')
 
 menu.addEventListener('click',function(){
     links.classList.toggle('active')
+    if(links.classList.contains('active')){
+        menu.innerHTML = `<i class="fa fa-times"></i>`
+    }else{
+        menu.innerHTML = `<i class="fa fa-bars"></i>`
+    }
 })
-times.addEventListener('click',function(){
-    links.classList.remove('active')
-})
+
 
 
 
