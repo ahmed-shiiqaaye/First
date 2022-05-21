@@ -4,12 +4,12 @@ let menu =document.getElementById('menu')
 let links = document.querySelector('.links')
 
 menu.addEventListener('click',function(){
-    links.classList.toggle('active')
     if(links.classList.contains('active')){
-        menu.innerHTML = `<i class="fa fa-times"></i>`
-    }else{
         menu.innerHTML = `<i class="fa fa-bars"></i>`
+    }else{
+        menu.innerHTML = `<i class="fa fa-times"></i>`
     }
+    links.classList.toggle('active')
 })
 
 
@@ -42,6 +42,8 @@ navLink.forEach(link =>{
     link.addEventListener('click',()=>{
         if(sideBar.classList.contains('active')){
             sideBar.classList.remove('active')
+            menu.innerHTML = `<i class="fa fa-bars"></i>`
+
         }
     })
 })
