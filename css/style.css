@@ -179,8 +179,10 @@ body{
         justify-content: center;
         align-items: center;
         height: 100%;
+        gap: 10px;
     }
     .showcase .container img{
+        height: 300px;
     }
 }
 /* about */
